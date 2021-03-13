@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const api = axios.create({
-    baseURL:"https://my-yahoo-newsscraper.herokuapp.com/" ,
+    baseURL:"https://my-yahoo-newsscraper.herokuapp.com/",
 })
 
 export default api
