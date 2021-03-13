@@ -65,7 +65,7 @@ const Dashboard:React.FC = ()=>{
 
         setLoading(true)
 
-        api.post("http://127.0.0.1:5000/yahoonews",{"query":query,"lang":lang})
+        api.post("yahoonews",{"query":query,"lang":lang})
         .then((res)=>{
 
             let art = res.data.news

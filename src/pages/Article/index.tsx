@@ -28,7 +28,7 @@ const Room:React.FC = ()=>{
 
         setLoading(true)
 
-        api.post("http://127.0.0.1:5000/article",{"link":articleLink})
+        api.post("article",{"link":articleLink})
         .then((res)=>{
             setArticle(res.data.article) 
             setLoading(false) 
