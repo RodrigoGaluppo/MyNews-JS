@@ -7,7 +7,7 @@ import AppProvider from './hooks';
 const App: React.FC = ()=>(
   <Router>
     <AppProvider>
-      <GlobalStyle/>   
+      <GlobalStyle/>  
       <Routes/>
     </AppProvider>
   </Router>

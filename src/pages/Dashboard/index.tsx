@@ -78,9 +78,9 @@ const Dashboard:React.FC = ()=>{
         .then((res)=>{
 
             let art = res.data.news
-
+            
             art = art.filter((article:IArticle)=>(
-                !!article.title && !!article.link  && article.imgSrc
+                !!article.title && !!article.link  
             ))
 
             setArticles(art)  
