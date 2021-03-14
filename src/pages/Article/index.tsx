@@ -28,7 +28,7 @@ const Room:React.FC = ()=>{
 
         setLoading(true)
 
-        api.post("article",{"link":articleLink})
+        api.post("https://my-yahoo-newsscraper.herokuapp.com/",{"link":articleLink})
         .then((res)=>{
             setArticle(res.data.article) 
             setLoading(false) 

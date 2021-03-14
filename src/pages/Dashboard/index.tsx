@@ -65,7 +65,7 @@ const Dashboard:React.FC = ()=>{
 
         setLoading(true)
 
-        api.post("yahoonews",{"query":query,"lang":lang})
+        api.post("https://my-yahoo-newsscraper.herokuapp.com/",{"query":query,"lang":lang})
         .then((res)=>{
 
             let art = res.data.news
