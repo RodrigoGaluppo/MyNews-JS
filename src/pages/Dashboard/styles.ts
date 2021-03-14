@@ -77,7 +77,6 @@ export const ListRooms = styled.main`
         width:100%;
         margin:0 auto;
         max-width:900px;
-        
         transition:0.5s;
         &:active{
             opacity:0.4;
@@ -275,7 +274,7 @@ export const ListRooms = styled.main`
         }
     }
     
-    padding: 0 2%;
+    padding: 0 2% 40px 2%;
 `
 export const Article = styled.div`
 
