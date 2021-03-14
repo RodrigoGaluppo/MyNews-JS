@@ -27,7 +27,11 @@ export const AuthProvider:React.FC = ({children})=>{
         if (language){
             return language
         }else{
-            return !!navigator.language ? navigator.language : "en-US"
+            let lang = navigator.language
+
+            lang = lang.split("-")[0] + lang.split("-")[1].toUpperCase()
+
+            return !!lang ? lang : "en-US"
         }
     })
 

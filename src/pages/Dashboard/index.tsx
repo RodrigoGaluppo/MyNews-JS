@@ -33,11 +33,20 @@ const Dashboard:React.FC = ()=>{
         {
             switch(navigator.language)
             {
+                case "pt-br":
+                    return "brasil"
+
                 case "pt-BR":
                     return "brasil"
 
+                case "pt-pt":
+                    return "portugal"
+
                 case "pt-PT":
                     return "portugal"
+
+                case "en-us":
+                    return "us"
 
                 case "en-US":
                     return "us"
