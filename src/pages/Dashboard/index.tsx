@@ -27,6 +27,7 @@ const Dashboard:React.FC = ()=>{
     const {setArticleLink,lang} = useAuth()
     const {addToast} = useToast()
     const [articles,setArticles] = useState<IArticle[]>([])
+    const [error,setError] = useState()
     const [query,SetQuery] =  useState(()=>{
         if(navigator.language)
         {
@@ -80,9 +81,10 @@ const Dashboard:React.FC = ()=>{
             
         })
 
-        .catch(()=>{
+        .catch((err)=>{
             setArticles([])
             addToast({type:"error","title":"could not connect to the server"})
+            setError(err.message)
             setLoading(false)
         })
     
@@ -107,6 +109,7 @@ const Dashboard:React.FC = ()=>{
                     </SearchInput>
                 </Form>
             </Search>
+            {error && <p>{error}</p>}
             <ListRooms>
                {articles.map((article)=>(
                    <article className="News" key={article.link}>
