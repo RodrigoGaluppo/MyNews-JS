@@ -10,7 +10,6 @@ export const Container = styled.div`
     
 `
 
-
 export const Info = styled.header`
     background-color:#323232;
     width:100%;
